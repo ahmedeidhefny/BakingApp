@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/recipe_image_detail"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/noimage" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="@dimen/margin_padding_size_medium"
+            android:layout_marginRight="@dimen/margin_padding_size_medium"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recipe_name_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_padding_size_micro"
+                android:paddingTop="@dimen/margin_padding_size_micro"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                tools:text="Nutella Pie" />
+
+            <TextView
+                android:id="@+id/recipe_servings_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_padding_size_small"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                tools:text="8 persons" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_padding_size_small"
+        android:layout_marginTop="@dimen/margin_padding_size_medium"
+        android:padding="4dp"
+        android:text="Ingredients :"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/itemIngredientsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/noIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_padding_size_medium"
+        android:layout_marginTop="@dimen/margin_padding_size_medium"
+        android:gravity="center"
+        android:padding="@dimen/margin_padding_size_micro"
+        android:text="@string/error_massage_ingredients"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_padding_size_medium"
+        android:padding="@dimen/margin_padding_size_micro"
+        android:text="steps:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+</LinearLayout>

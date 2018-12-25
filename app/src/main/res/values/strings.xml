@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BakingApp</string>
+
+    <string name="error_massage">Recipe Data Not Avilable</string>
+    <string name="error_massage_steps">Steps Data Not Avilable</string>
+
+    <string name="error_massage_no_internet">No Internet Connection</string>
+    <string name="error_massage_list_recipes">No Recipes List</string>
+
+    <string name="error_massage_ingredients">This Recipe Not Has Ingredients</string>
+    <string name="error_steps">This Recipe Not Has Steps</string>
+
+    <string name="recipe_servings">Servings</string>
+    <string name="appwidget_text">widget EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_padding_size_medium"
+    android:background="@android:color/white"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_step_root"
+        android:padding="@dimen/margin_padding_size_small"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/margin_padding_size_micro"
+                android:text="step:"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/step_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                tools:text="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/stepShortDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/margin_padding_size_small"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/textColor"
+            tools:text="Recipe description" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_padding_size_small"
+            android:background="@color/seprator_background" />
+
+        <TextView
+            android:id="@+id/stepTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/margin_padding_size_micro"
+            android:text="Tab To Step Details"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
