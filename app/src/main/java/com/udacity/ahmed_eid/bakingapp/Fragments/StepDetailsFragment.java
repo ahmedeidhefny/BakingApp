@@ -126,38 +126,23 @@ public class StepDetailsFragment extends Fragment implements View.OnClickListene
         }
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        if (Util.SDK_INT > 23) {
-            initializePlayer(uri);
-        }
-    }
 
     @Override
     public void onResume() {
         super.onResume();
-        hideSystemUi();
-        if (Util.SDK_INT <= 23 || player == null) {
+        //hideSystemUi();
+        if (player == null) {
             initializePlayer(uri);
         }
+
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        if (Util.SDK_INT <= 23) {
-            releasePlayer();
-        }
+        releasePlayer();
     }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (Util.SDK_INT > 23) {
-            releasePlayer();
-        }
-    }
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {

@@ -66,6 +66,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     public void goToRecipeDetail(Recipe recipe) {
         Intent intent = new Intent(mContext, RecipeDetailsActivity.class);
         intent.putExtra(AppConstants.recipeObjectKey, recipe);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(intent);
     }
 

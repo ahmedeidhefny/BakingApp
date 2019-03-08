@@ -83,6 +83,7 @@ public class StepAdapter extends RecyclerView.Adapter<StepAdapter.StepViewHolder
             intent.putExtra(AppConstants.ListStepsKey, steps);
             intent.putExtra(AppConstants.StepPositionKey, position);
             intent.putExtra(AppConstants.Intent_IsTwoPaneKey, isTwoPane);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             mContext.startActivity(intent);
         }
 

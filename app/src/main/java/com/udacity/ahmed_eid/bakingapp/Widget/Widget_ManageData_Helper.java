@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.udacity.ahmed_eid.bakingapp.Model.Recipe;
 
 public class Widget_ManageData_Helper {
@@ -20,7 +21,7 @@ public class Widget_ManageData_Helper {
     public Widget_ManageData_Helper(Context context) {
         sharedPreferences = context.getSharedPreferences(SHARED_PREFERENCES_NAME, 0);
         editor = sharedPreferences.edit();
-        gson = new Gson();
+        gson = new GsonBuilder().setLenient().create();
     }
 
     @SuppressLint("LongLogTag")
